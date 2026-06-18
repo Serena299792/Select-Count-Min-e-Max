@@ -1,16 +1,15 @@
 # Select-Count-Min-e-Max
 HT-SIS-01-M-26-10495
-
 -- 1
 SELECT MIN(Quantity) FROM OrderDetails;
 
-- 2
+-- 2
 SELECT MAX(Quantity) FROM OrderDetails;
 
 -- 3
 SELECT MIN(OrderID) FROM OrderDetails;
 
-- 4
+-- 4
 SELECT MAX(OrderID) FROM OrderDetails
 WHERE Quantity > 5;
 
@@ -74,7 +73,7 @@ WHERE Quantity > 20;
 
 -- 21
 SELECT MAX(Quantity) FROM OrderDetails
-WHERE ProductID = 6;
+WHERE ProductID == 6;
 
 -- 22
 SELECT MIN(OrderID) FROM OrderDetails;
@@ -111,7 +110,7 @@ SELECT MIN(OrderID) FROM OrderDetails
 WHERE Quantity < 8;
 
 -- 31
-SELECT MAX(Quantity) FROM OrderDetails;
+SELECT MAX(Quantity) FROM OrderDetails
 
 -- 32
 SELECT MIN(Quantity) FROM OrderDetails
@@ -185,13 +184,13 @@ WHERE Quantity < 20;
 SELECT MIN(OrderID) FROM OrderDetails
 WHERE Quantity > 25;
 
-Exercícios: SELECT COUNT FROM WHERE ORDER BY
+SELECT COUNT FROM WHERE ORDER BY
 
 -- 1
 SELECT COUNT(*) FROM OrderDetails;
 
 -- 2
-SELECT COUNT(DISTINCT OrderID) FROM OrderDetails
+SELECT COUNT(DISTINCT OrderID) FROM OrderDetails;
 
 -- 3
 SELECT COUNT(DISTINCT ProductID) FROM OrderDetails;
@@ -273,14 +272,14 @@ SELECT COUNT(*) FROM OrderDetails
 WHERE CAST(OrderDetailID AS CHAR) LIKE '1%';
 
 -- 23
-SELECT COUNT(*) FROM OrderDetails
+SELECT COUNT() FROM OrderDetails
 WHERE OrderID = 10;
 
 -- 24
 SELECT COUNT(*) FROM OrderDetails
 WHERE CAST(Quantity AS CHAR) LIKE '%0';
 
-- 25
+-- 25
 SELECT COUNT(OrderID) FROM OrderDetails
 WHERE ProductID < 4;
 
@@ -342,7 +341,7 @@ WHERE Quantity > 15;
 
 -- 40
 SELECT COUNT(*) FROM OrderDetails
-WHERE OrderDetailID < 25;
+WHERE OrderDetailID < 25
 
 -- 41
 SELECT COUNT(*) FROM OrderDetails
@@ -354,7 +353,7 @@ WHERE ProductID = 7;
 
 -- 43
 SELECT COUNT(*) FROM OrderDetails
-WHERE Quantity > 20
+WHERE Quantity > 20;
 
 -- 44
 SELECT COUNT(*) FROM OrderDetails
@@ -383,4 +382,3 @@ WHERE Quantity > 30;
 -- 50
 SELECT COUNT(*) FROM OrderDetails
 WHERE OrderID BETWEEN 10 AND 40;
-
